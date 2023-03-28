@@ -1,17 +1,17 @@
 package HW_AutoQA_1;
 
-import org.testng.annotations.Test;
+import org.junit.Assert;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
 
-    @Test
-    public void testRemain() {
+    @org.junit.Test
+    public void remain() {
         int amount = 990;
         int expected = 10;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 }
